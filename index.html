@@ -2,63 +2,151 @@
 <html>
 
 <head>
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="js/jquery.masonry.js"></script>
 
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="js/jquery.masonry.js"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<!-- Fancybox Javascript -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox-thumb").fancybox({
+        prevEffect  : 'none',
+        nextEffect  : 'none',
+        openEffect  : 'elastic',
+        closeEffect : 'elastic',
+
+        helpers : {
+            thumbs  : {
+                width   : 100,
+                height  : 100
+            }
+        }
+    });
+});
+</script>
 
 </head>
 
 <body>
 <div class="row">
 	<div class="large-12 columns">
-		<h1>Masonry &amp; jQuery</h1>
-		<h2>Insert any images you want and see how great they adjust like mason blocks</h2>
+		<h1>Masonry &amp; Fancybox</h1>
+		<h2>Images resize like masonry blocks. Click on the image to see a thumbnail gallery.</h2>
 		<hr />
 	</div>
     </div>
 
+
+
 	<div class="row">
 		<div id="container" class="large-12 columns transitions-enabled large-centered clearfix">
-               	<div class="box col2"><img src="images/city1.jpg" /></div>
-               	<div class="box col2"><img src="images/city2.jpg" /></div>
-               	<div class="box col2"><img src="images/city3.jpg" /></div>
-               	<div class="box col2"><img src="images/city4.jpg" /></div>
-               	<div class="box col2"><img src="images/city5.jpg" /></div>
-               	<div class="box col2"><img src="images/city6.jpg" /></div>
-               	<div class="box col2"><img src="images/city7.jpg" /></div>
-               	<div class="box col2"><img src="images/city8.jpg" /></div>
-               	<div class="box col2"><img src="images/city9.jpg" /></div>
-               	<div class="box col2"><img src="images/city10.jpg" /></div>
-               	<div class="box col2"><img src="images/city11.jpg" /></div>
-               	<div class="box col2"><img src="images/city12.jpg" /></div>
-               	<div class="box col2"><img src="images/city13.jpg" /></div>
-               	<div class="box col2"><img src="images/city14.jpg" /></div>
-               	<div class="box col2"><img src="images/city15.jpg" /></div>
-               	<div class="box col2"><img src="images/city16.jpg" /></div>
-               	<div class="box col2"><img src="images/city17.jpg" /></div>
-               	<div class="box col2"><img src="images/city18.jpg" /></div>
-               	<div class="box col2"><img src="images/city19.jpg" /></div>
-               	<div class="box col2"><img src="images/city20.jpg" /></div>
-               	<div class="box col2"><img src="images/city21.jpg" /></div>
-		            <div class="box col2"><img src="images/city27.jpg" /></div>
-                <div class="box col2"><img src="images/city23.jpg" /></div>
-                <div class="box col2"><img src="images/city24.jpg" /></div>
-                <div class="box col2"><img src="images/city25.jpg" /></div>
-                <div class="box col2"><img src="images/city26.jpg" /></div>
-                <div class="box col2"><img src="images/city30.jpg" /></div>
-                <div class="box col2"><img src="images/city29.jpg" /></div>
-                <div class="box col2"><img src="images/city13.jpg" /></div>
-                <div class="box col2"><img src="images/city31.jpg" /></div>
-                <div class="box col2"><img src="images/city28.jpg" /></div>
+
+               	<a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city1.jpg">
+                <img src="images/city1.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city2.jpg">
+                <img src="images/city2.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city3.jpg">
+                <img src="images/city3.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city4.jpg">
+                <img src="images/city4.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city5.jpg">
+                <img src="images/city5.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city6.jpg">
+                <img src="images/city6.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city7.jpg">
+                <img src="images/city7.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city8.jpg">
+                <img src="images/city8.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city9.jpg">
+                <img src="images/city9.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city10.jpg">
+                <img src="images/city10.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city11.jpg">
+                <img src="images/city11.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city12.jpg">
+                <img src="images/city12.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city13.jpg">
+                <img src="images/city13.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city14.jpg">
+                <img src="images/city14.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city15.jpg">
+                <img src="images/city15.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city16.jpg">
+                <img src="images/city16.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city17.jpg">
+                <img src="images/city17.jpg" alt="">
+                </a>
+                <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city18.jpg">
+                <img src="images/city18.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city19.jpg">
+                <img src="images/city19.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city20.jpg">
+                <img src="images/city20.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city21.jpg">
+                <img src="images/city21.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city27.jpg">
+                <img src="images/city27.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city23.jpg">
+                <img src="images/city23.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city24.jpg">
+                <img src="images/city24.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city25.jpg">
+                <img src="images/city25.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city26.jpg">
+                <img src="images/city26.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city30.jpg">
+                <img src="images/city30.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city29.jpg">
+                <img src="images/city29.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city13.jpg">
+                <img src="images/city13.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city31.jpg">
+                <img src="images/city31.jpg" alt="">
+                </a>
+                 <a class="box col2 fancybox-thumb" rel="fancybox-thumb" href="images/city28.jpg">
+                <img src="images/city28.jpg" alt="">
+                </a>
 
 	</div><!--/container -->
     </div><!--/row -->
 
-
-<!-- adding a comment -->
 
 <script>
     var $containter = $('#container');
